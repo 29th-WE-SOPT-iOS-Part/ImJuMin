@@ -27,19 +27,6 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func touchUpNextButton(_ sender: Any) {
       requestLogin()
-     /*
-      guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "CheckViewController") as? CheckViewController
-      else {return}
-           
-      nextVC.message = nameTextField.text
-      nextVC.modalPresentationStyle = .fullScreen
-      nextVC.modalTransitionStyle = .crossDissolve
-           
-      [nameTextField,emailTextField,pwdTextField].forEach{
-        $0.text?.removeAll()
-      }
-           
-      self.present(nextVC, animated: true, completion: nil)*/
     }
     
     @IBAction func touchUpSignUpButton(_ sender: Any) {
@@ -110,6 +97,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
 extension SignInViewController {
     func requestLogin() {
         UserSignService.shared.login(email: emailTextField.text ?? "" ,
+                                     name: nameTextField.text ?? "",
                                      password: pwdTextField.text ?? "") { responseData in
             switch responseData {
             case .success(let loginResponse):
