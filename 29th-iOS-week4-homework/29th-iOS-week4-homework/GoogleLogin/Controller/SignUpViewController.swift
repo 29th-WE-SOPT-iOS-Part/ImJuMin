@@ -19,6 +19,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        nameTextField.delegate = self
     }
     
     // MARK: - IBAction Part
@@ -31,9 +32,9 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         nextVC.modalPresentationStyle = .fullScreen
         nextVC.modalTransitionStyle = .crossDissolve
         
-        self.nameTextField.text = ""
-        self.emailTextField.text = ""
-        self.pwdTextField.text = ""
+        [nameTextField,emailTextField,pwdTextField].forEach{
+            $0.text?.removeAll()
+        }
         
         self.present(nextVC, animated: true, completion: nil)
     }
@@ -42,5 +43,18 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
         self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == self.nameTextField {
+            textField.resignFirstResponder()
+            self.emailTextField.becomeFirstResponder()
+        }
+        else if textField == self.emailTextField {
+            textField.resignFirstResponder()
+            self.pwdTextField.becomeFirstResponder()
+        }
+        textField.resignFirstResponder()
+        return true
     }
 }

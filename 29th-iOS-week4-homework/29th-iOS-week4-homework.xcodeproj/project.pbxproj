@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68C8AA87D0391972F51A0F6A /* Pods_29th_iOS_week4_homework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0584413B77CB11F33A91C9C8 /* Pods_29th_iOS_week4_homework.framework */; };
 		6FF11D2D274128EA00136A18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FF11D0A274128EA00136A18 /* Assets.xcassets */; };
 		6FF11D2E274128EA00136A18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FF11D0D274128EA00136A18 /* Main.storyboard */; };
 		6FF11D30274128EA00136A18 /* VideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF11D10274128EA00136A18 /* VideoVC.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0584413B77CB11F33A91C9C8 /* Pods_29th_iOS_week4_homework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_29th_iOS_week4_homework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FB4805B272C11BF003B9053 /* 29th-iOS-week4-homework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "29th-iOS-week4-homework.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FF11D0A274128EA00136A18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6FF11D0D274128EA00136A18 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -56,6 +58,8 @@
 		6FF11D2C274128EA00136A18 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		6FF11D4527412A4200136A18 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6FF11D492741347900136A18 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9BB75F5F4665F4A9DBDB2FE9 /* Pods-29th-iOS-week4-homework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-29th-iOS-week4-homework.release.xcconfig"; path = "Target Support Files/Pods-29th-iOS-week4-homework/Pods-29th-iOS-week4-homework.release.xcconfig"; sourceTree = "<group>"; };
+		B40CA85979B38C14BAC88298 /* Pods-29th-iOS-week4-homework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-29th-iOS-week4-homework.debug.xcconfig"; path = "Target Support Files/Pods-29th-iOS-week4-homework/Pods-29th-iOS-week4-homework.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68C8AA87D0391972F51A0F6A /* Pods_29th_iOS_week4_homework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +79,8 @@
 			children = (
 				6FF11D08274128EA00136A18 /* 29th-iOS-week4-homework */,
 				6FB4805C272C11BF003B9053 /* Products */,
+				A45FC67FF9F8C55E50A59B6E /* Pods */,
+				EDA835EFD584606C20647E61 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -195,6 +202,24 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		A45FC67FF9F8C55E50A59B6E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B40CA85979B38C14BAC88298 /* Pods-29th-iOS-week4-homework.debug.xcconfig */,
+				9BB75F5F4665F4A9DBDB2FE9 /* Pods-29th-iOS-week4-homework.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EDA835EFD584606C20647E61 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0584413B77CB11F33A91C9C8 /* Pods_29th_iOS_week4_homework.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -202,9 +227,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6FB4806F272C11C0003B9053 /* Build configuration list for PBXNativeTarget "29th-iOS-week4-homework" */;
 			buildPhases = (
+				728A527726BBBF3523ED89FF /* [CP] Check Pods Manifest.lock */,
 				6FB48057272C11BF003B9053 /* Sources */,
 				6FB48058272C11BF003B9053 /* Frameworks */,
 				6FB48059272C11BF003B9053 /* Resources */,
+				FF2E68A703E22C51A77F701E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -262,6 +289,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		728A527726BBBF3523ED89FF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-29th-iOS-week4-homework-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF2E68A703E22C51A77F701E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-29th-iOS-week4-homework/Pods-29th-iOS-week4-homework-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-29th-iOS-week4-homework/Pods-29th-iOS-week4-homework-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-29th-iOS-week4-homework/Pods-29th-iOS-week4-homework-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6FB48057272C11BF003B9053 /* Sources */ = {
@@ -420,6 +489,7 @@
 		};
 		6FB48070272C11C0003B9053 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B40CA85979B38C14BAC88298 /* Pods-29th-iOS-week4-homework.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -448,6 +518,7 @@
 		};
 		6FB48071272C11C0003B9053 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BB75F5F4665F4A9DBDB2FE9 /* Pods-29th-iOS-week4-homework.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

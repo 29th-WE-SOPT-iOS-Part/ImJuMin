@@ -33,9 +33,9 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
       nextVC.modalPresentationStyle = .fullScreen
       nextVC.modalTransitionStyle = .crossDissolve
            
-      self.nameTextField.text=""
-      self.emailTextField.text=""
-      self.pwdTextField.text=""
+      [nameTextField,emailTextField,pwdTextField].forEach{
+        $0.text?.removeAll()
+      }
            
       self.present(nextVC, animated: true, completion: nil)
     }
@@ -43,11 +43,11 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     @IBAction func touchUpSignUpButton(_ sender: Any) {
       guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpViewController")
       else {return}
-            
-      self.nameTextField.text = ""
-      self.emailTextField.text = ""
-      self.pwdTextField.text = ""
-            
+        
+      [nameTextField,emailTextField,pwdTextField].forEach{
+        $0.text?.removeAll()
+      }
+        
       self.navigationController?.pushViewController(nextVC, animated: true)
     }
     
