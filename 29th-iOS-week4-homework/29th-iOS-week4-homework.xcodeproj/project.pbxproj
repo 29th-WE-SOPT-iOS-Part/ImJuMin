@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		68C8AA87D0391972F51A0F6A /* Pods_29th_iOS_week4_homework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0584413B77CB11F33A91C9C8 /* Pods_29th_iOS_week4_homework.framework */; };
+		6FC3FA2A27413D7C001C6E57 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC3FA2927413D7C001C6E57 /* APIConstants.swift */; };
+		6FC3FA2C27413DFC001C6E57 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC3FA2B27413DFC001C6E57 /* NetworkResult.swift */; };
+		6FC3FA2E27413EB4001C6E57 /* LoginResponseDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC3FA2D27413EB4001C6E57 /* LoginResponseDataModel.swift */; };
+		6FC3FA3027413F7A001C6E57 /* UserSignService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC3FA2F27413F7A001C6E57 /* UserSignService.swift */; };
 		6FF11D2D274128EA00136A18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FF11D0A274128EA00136A18 /* Assets.xcassets */; };
 		6FF11D2E274128EA00136A18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FF11D0D274128EA00136A18 /* Main.storyboard */; };
 		6FF11D30274128EA00136A18 /* VideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF11D10274128EA00136A18 /* VideoVC.swift */; };
@@ -29,12 +33,15 @@
 		6FF11D42274128EA00136A18 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF11D2A274128EA00136A18 /* CustomTabBarController.swift */; };
 		6FF11D43274128EA00136A18 /* ShortsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF11D2B274128EA00136A18 /* ShortsVC.swift */; };
 		6FF11D44274128EA00136A18 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF11D2C274128EA00136A18 /* SignInViewController.swift */; };
-		6FF11D4A2741347900136A18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF11D492741347900136A18 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0584413B77CB11F33A91C9C8 /* Pods_29th_iOS_week4_homework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_29th_iOS_week4_homework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FB4805B272C11BF003B9053 /* 29th-iOS-week4-homework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "29th-iOS-week4-homework.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FC3FA2927413D7C001C6E57 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APIConstants.swift; path = "29th-iOS-week4-homework/GoogleLogin/Storyboard/APIConstants.swift"; sourceTree = SOURCE_ROOT; };
+		6FC3FA2B27413DFC001C6E57 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		6FC3FA2D27413EB4001C6E57 /* LoginResponseDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseDataModel.swift; sourceTree = "<group>"; };
+		6FC3FA2F27413F7A001C6E57 /* UserSignService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSignService.swift; sourceTree = "<group>"; };
 		6FF11D0A274128EA00136A18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6FF11D0D274128EA00136A18 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		6FF11D10274128EA00136A18 /* VideoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoVC.swift; sourceTree = "<group>"; };
@@ -57,7 +64,6 @@
 		6FF11D2B274128EA00136A18 /* ShortsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShortsVC.swift; sourceTree = "<group>"; };
 		6FF11D2C274128EA00136A18 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		6FF11D4527412A4200136A18 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6FF11D492741347900136A18 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9BB75F5F4665F4A9DBDB2FE9 /* Pods-29th-iOS-week4-homework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-29th-iOS-week4-homework.release.xcconfig"; path = "Target Support Files/Pods-29th-iOS-week4-homework/Pods-29th-iOS-week4-homework.release.xcconfig"; sourceTree = "<group>"; };
 		B40CA85979B38C14BAC88298 /* Pods-29th-iOS-week4-homework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-29th-iOS-week4-homework.debug.xcconfig"; path = "Target Support Files/Pods-29th-iOS-week4-homework/Pods-29th-iOS-week4-homework.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +113,10 @@
 		6FF11D09274128EA00136A18 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				6FC3FA2927413D7C001C6E57 /* APIConstants.swift */,
+				6FC3FA2B27413DFC001C6E57 /* NetworkResult.swift */,
+				6FC3FA2D27413EB4001C6E57 /* LoginResponseDataModel.swift */,
+				6FC3FA2F27413F7A001C6E57 /* UserSignService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -133,7 +143,6 @@
 			isa = PBXGroup;
 			children = (
 				6FF11D10274128EA00136A18 /* VideoVC.swift */,
-				6FF11D492741347900136A18 /* ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -208,7 +217,6 @@
 				B40CA85979B38C14BAC88298 /* Pods-29th-iOS-week4-homework.debug.xcconfig */,
 				9BB75F5F4665F4A9DBDB2FE9 /* Pods-29th-iOS-week4-homework.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -338,7 +346,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FF11D3E274128EA00136A18 /* LibraryVC.swift in Sources */,
+				6FC3FA3027413F7A001C6E57 /* UserSignService.swift in Sources */,
 				6FF11D40274128EA00136A18 /* NavigationViewController.swift in Sources */,
+				6FC3FA2E27413EB4001C6E57 /* LoginResponseDataModel.swift in Sources */,
 				6FF11D42274128EA00136A18 /* CustomTabBarController.swift in Sources */,
 				6FF11D30274128EA00136A18 /* VideoVC.swift in Sources */,
 				6FF11D43274128EA00136A18 /* ShortsVC.swift in Sources */,
@@ -346,14 +356,15 @@
 				6FF11D44274128EA00136A18 /* SignInViewController.swift in Sources */,
 				6FF11D3C274128EA00136A18 /* SubscriptionVC.swift in Sources */,
 				6FF11D32274128EA00136A18 /* VideoCollectionViewCell.swift in Sources */,
-				6FF11D4A2741347900136A18 /* ViewController.swift in Sources */,
 				6FF11D36274128EA00136A18 /* AppDelegate.swift in Sources */,
 				6FF11D3D274128EA00136A18 /* PlusVC.swift in Sources */,
 				6FF11D31274128EA00136A18 /* VideoTableViewCell.swift in Sources */,
 				6FF11D3F274128EA00136A18 /* HomeVC.swift in Sources */,
+				6FC3FA2A27413D7C001C6E57 /* APIConstants.swift in Sources */,
 				6FF11D39274128EA00136A18 /* VideoContentDataModel.swift in Sources */,
 				6FF11D38274128EA00136A18 /* SceneDelegate.swift in Sources */,
 				6FF11D41274128EA00136A18 /* CheckViewController.swift in Sources */,
+				6FC3FA2C27413DFC001C6E57 /* NetworkResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

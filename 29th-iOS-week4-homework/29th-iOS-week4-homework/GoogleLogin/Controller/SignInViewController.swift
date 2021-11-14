@@ -26,6 +26,8 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     // MARK: - IBAction Part
     
     @IBAction func touchUpNextButton(_ sender: Any) {
+      requestLogin()
+     /*
       guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "CheckViewController") as? CheckViewController
       else {return}
            
@@ -37,7 +39,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         $0.text?.removeAll()
       }
            
-      self.present(nextVC, animated: true, completion: nil)
+      self.present(nextVC, animated: true, completion: nil)*/
     }
     
     @IBAction func touchUpSignUpButton(_ sender: Any) {
@@ -71,5 +73,58 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         }
         textField.resignFirstResponder()
         return true
+    }
+    
+    func simpleAlert(message: String) {
+        let alert = UIAlertController(title: "로그인", message: message, preferredStyle: .alert)
+        if message == "로그인 성공" {
+            let okAction = UIAlertAction(title: "확인", style: .default) {(action) in
+                self.goToCheckView() }
+            alert.addAction(okAction)
+            present(alert, animated: true)
+        } else {
+            let okAction = UIAlertAction(title: "확인", style: .default)
+            alert.addAction(okAction)
+            present(alert, animated: true)
+        }
+    }
+        
+    func goToCheckView() {
+        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "CheckViewController") as? CheckViewController
+        else {return}
+             
+        nextVC.message = nameTextField.text
+        nextVC.modalPresentationStyle = .fullScreen
+        nextVC.modalTransitionStyle = .crossDissolve
+             
+        [nameTextField,emailTextField,pwdTextField].forEach{
+          $0.text?.removeAll()
+        }
+             
+        self.present(nextVC, animated: true, completion: nil)
+    }
+}
+
+// MARK: - Extension Part
+
+extension SignInViewController {
+    func requestLogin() {
+        UserSignService.shared.login(email: emailTextField.text ?? "" ,
+                                     password: pwdTextField.text ?? "") { responseData in
+            switch responseData {
+            case .success(let loginResponse):
+                guard let response = loginResponse as? LoginResponseData else {return}
+                self.simpleAlert(message: response.message)
+            case .requestErr(let loginResponse):
+                guard let message = loginResponse as? String else { return }
+                self.simpleAlert(message: message)
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
+        }
     }
 }
