@@ -74,6 +74,70 @@ class VideoVC: UIViewController {
       YoutuberData(youtuberName: "PlanPart", youtuberImageName: "ggamju6"),
     ])
   }
+=======
+    
+    // MARK: - Vars & Lets Part
+    
+    var videoContentList: [VideoContentData] = []
+    var youtuberList: [YoutuberData] = []
+    
+    // MARK: - UI Component Part
+    
+    @IBOutlet weak var videoTableView: UITableView!
+    @IBOutlet weak var youtuberCollectionView: UICollectionView!
+    @IBOutlet weak var loginButton: UIButton!
+    
+    // MARK: - Life Cycle Part
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        initVideoContentList()
+        initYoutuberList()
+        registerXib()
+        videoTableView.dataSource = self
+        videoTableView.delegate = self
+        youtuberCollectionView.delegate = self
+        youtuberCollectionView.dataSource = self
+    }
+    
+    // MARK: - IBAction Part
+    
+    @IBAction func touchUpToLogin(_ sender: UIButton) {
+        let LoginStoryBoard = UIStoryboard.init(name: "GoogleLogin", bundle: nil)
+        guard let nextVC = LoginStoryBoard.instantiateViewController(withIdentifier: "NavigationViewController" ) as? NavigationViewController else {return}
+        
+        nextVC.modalPresentationStyle = .fullScreen
+        present(nextVC, animated: true, completion: nil)
+    }
+    
+    // MARK: - Custom Method Part
+    
+    func registerXib() {
+        let xibName = UINib(nibName: VideoTableViewCell.identifier, bundle: nil)
+        videoTableView.register(xibName, forCellReuseIdentifier: VideoTableViewCell.identifier)
+    }
+    
+    func initVideoContentList() {
+        videoContentList.append(contentsOf: [
+            VideoContentData(videoName: "1차 iOS 세미나 : iOS 컴포넌트 이해, Xcode 기본 사용법, View 화면전환", description: "WE SOPT ・조회수 100만회 ・ 3주 전"),
+            VideoContentData(videoName: "2차 iOS 세미나 : AutoLayout, StackView, TabBarController", description: "WE SOPT ・조회수 100만회 ・ 3주 전"),
+            VideoContentData(videoName: "3차 iOS 세미나 : ScrollView, Delegate Pattern, TableView, CollectionView", description: "WE SOPT ・조회수 100만회 ・ 3주 전"),
+            VideoContentData(videoName: "4차 iOS 세미나 : Cocoapods & Networking, REST API", description: "WE SOPT ・조회수 100만회 ・ 3주 전"),
+            VideoContentData(videoName: "7차 iOS 세미나 : Animation과 제스쳐, 데이터 전달 심화 ", description: "WE SOPT ・조회수 100만회 ・ 3주 전")
+        ])
+    }
+    
+    func initYoutuberList() {
+        youtuberList.append(contentsOf: [
+            YoutuberData(youtuberName: "iOSPart", youtuberImageName: "ggamju1"),
+            YoutuberData(youtuberName: "ServerPart", youtuberImageName: "ggamju2"),
+            YoutuberData(youtuberName: "AndroidPart", youtuberImageName: "ggamju3"),
+            YoutuberData(youtuberName: "DesignPart", youtuberImageName: "ggamju4"),
+            YoutuberData(youtuberName: "WebPart", youtuberImageName: "ggamju5"),
+            YoutuberData(youtuberName: "PlanPart", youtuberImageName: "ggamju6"),
+        ])
+    }
+>>>>>>> feature/7-week4
 }
 
 // MARK: - UITableViewDelegate
