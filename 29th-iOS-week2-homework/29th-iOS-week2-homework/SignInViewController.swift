@@ -50,14 +50,54 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
       self.navigationController?.pushViewController(nextVC, animated: true)
     }
     
+    
+    
+    
+    
+    
+    
+    
+    
+
     @IBAction func myExit(sender: UIStoryboardSegue) {
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     // MARK: - Custom Method Part
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
       self.view.endEditing(true)
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     // 키보드에서 다음버튼이나 return버튼 눌렀을 때 다음 입력창으로 넘어가기위한 코드
     // 아래 코드가 왜 안될까요..?왜..? 제가 놓친게 뭘까요?ㅜㅜ

@@ -8,39 +8,40 @@
 import UIKit
 
 class CheckViewController: UIViewController {
-
-    // MARK: - Vars & Lets Part
+  
+  // MARK: - Vars & Lets Part
+  
+  var message: String?
+  
+  // MARK: - UI Component Part
+  
+  @IBOutlet weak var showNameLabel: UILabel!
+  
+  // MARK: - Life Cycle Part
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    setNameInLabel()
+  }
+  
+  // MARK: - IBAction Part
+  
+  @IBAction func touchUpOkayButton(_ sender: Any) {
+    guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: Identifiers.customTBC) as? CustomTabBarController
+    else { return }
     
-    var message: String?
+    nextVC.modalPresentationStyle = .fullScreen
+    nextVC.modalTransitionStyle = .crossDissolve
     
-    // MARK: - UI Component Part
-    
-    @IBOutlet weak var showNameLabel: UILabel!
-    
-    // MARK: - Life Cycle Part
-    override func viewDidLoad() {
-      super.viewDidLoad()
-      setNameInLabel()
+    present(nextVC, animated: true, completion: nil)
+  }
+  
+  // MARK: - Custom Method Part
+  
+  func setNameInLabel() {
+    if let name = message {
+      showNameLabel.text = "\(name)님\n환영합니다!"
+      showNameLabel.sizeToFit()
     }
-    
-    // MARK: - IBAction Part
-    
-    @IBAction func touchUpOkayButton(_ sender: Any) {
-      guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "CustomTabBarController") as? CustomTabBarController
-      else {return}
-        
-      nextVC.modalPresentationStyle = .fullScreen
-      nextVC.modalTransitionStyle = .crossDissolve
-        
-      self.present(nextVC, animated: true, completion: nil)
-    }
-    
-    // MARK: - Custom Method Part
-    
-    func setNameInLabel() {
-      if let name = message {
-        showNameLabel.text = "\(name)님\n환영합니다!"
-        showNameLabel.sizeToFit()
-      }
-    }
+  }
 }

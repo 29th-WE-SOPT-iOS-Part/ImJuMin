@@ -177,12 +177,17 @@
                                     <action selector="touchUpNextButton:" destination="ocD-br-wrv" eventType="touchUpInside" id="ZBg-3a-sem"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OCZ-Xi-YBe">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OCZ-Xi-YBe">
                                 <rect key="frame" x="21" y="520" width="16" height="16"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system">
-                                    <color key="baseForegroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </buttonConfiguration>
+                                <color key="tintColor" systemColor="systemGray2Color"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button" image="square" catalog="system">
+                                    <color key="titleColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="selected" image="checkmark.square.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="touchUpShowPwd:" destination="ocD-br-wrv" eventType="touchUpInside" id="GIl-na-KYm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gEN-mD-3RR"/>
@@ -312,7 +317,7 @@
         <!--Item 1-->
         <scene sceneID="3fp-tK-ccH">
             <objects>
-                <viewController storyboardIdentifier="HomeVC" id="0OG-CN-eWY" customClass="HomeVC" customModule="_9th_iOS_week4_homework" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" id="0OG-CN-eWY" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Umt-ra-TbA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -328,7 +333,7 @@
         <!--Item 2-->
         <scene sceneID="5DN-Tw-a1p">
             <objects>
-                <viewController storyboardIdentifier="ShortsVC" id="PGd-VD-GHD" customClass="ShortsVC" customModule="_9th_iOS_week4_homework" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ShortsVC" id="PGd-VD-GHD" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h9S-X2-8hs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -344,7 +349,7 @@
         <!--Item 3-->
         <scene sceneID="rRu-7W-XQW">
             <objects>
-                <viewController storyboardIdentifier="PlusVC" id="Q0N-qh-XUy" userLabel="Item 3" customClass="PlusVC" customModule="_9th_iOS_week4_homework" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlusVC" id="Q0N-qh-XUy" userLabel="Item 3" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mQd-O2-xeQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -360,7 +365,7 @@
         <!--Item 4-->
         <scene sceneID="ITM-sG-p4n">
             <objects>
-                <viewController storyboardIdentifier="SubscriptionVC" id="RI1-0u-0x3" userLabel="Item 4" customClass="SubscriptionVC" customModule="_9th_iOS_week4_homework" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SubscriptionVC" id="RI1-0u-0x3" userLabel="Item 4" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h6c-Ry-qy0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -376,7 +381,7 @@
         <!--Item 5-->
         <scene sceneID="mOi-X7-NmC">
             <objects>
-                <viewController storyboardIdentifier="LibraryVC" id="uhJ-G7-v9S" userLabel="Item 5" customClass="LibraryVC" customModule="_9th_iOS_week4_homework" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LibraryVC" id="uhJ-G7-v9S" userLabel="Item 5" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ujq-Hc-UrD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -389,10 +394,10 @@
             </objects>
             <point key="canvasLocation" x="2785" y="828"/>
         </scene>
-        <!--Navigation View Controller-->
+        <!--Navigation Controller-->
         <scene sceneID="7uZ-Fk-Tcy">
             <objects>
-                <navigationController storyboardIdentifier="NavigationViewController" automaticallyAdjustsScrollViewInsets="NO" id="mfn-IA-14N" customClass="NavigationViewController" customModule="_9th_iOS_week4_homework" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavigationController" automaticallyAdjustsScrollViewInsets="NO" id="mfn-IA-14N" customClass="NavigationController" customModule="_9th_iOS_week4_homework" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="KLx-v1-ijh">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -410,9 +415,13 @@
     </scenes>
     <resources>
         <image name="Google_logo" width="118" height="40"/>
+        <image name="checkmark.square.fill" catalog="system" width="128" height="114"/>
         <image name="square" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

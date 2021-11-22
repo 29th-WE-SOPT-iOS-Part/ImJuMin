@@ -7,10 +7,15 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Regular.otf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" restorationIdentifier="VideoTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="VideoTableViewCell" id="KGk-i7-Jjw" customClass="VideoTableViewCell" customModule="_9th_iOS_week3_homework" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="VideoTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="VideoTableViewCell" id="KGk-i7-Jjw" customClass="VideoTableViewCell" customModule="_9th_iOS_week4_homework" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="306"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -52,13 +57,16 @@
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="titleLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9X-gQ-D6m">
                         <rect key="frame" x="60" y="224" width="270" height="35"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="R8D-lc-PBr"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="subTitleLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFv-jQ-Zh6">
                         <rect key="frame" x="60" y="264" width="270" height="16"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -72,7 +80,6 @@
                     <constraint firstItem="TFv-jQ-Zh6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="264" id="HbL-Tt-utb"/>
                     <constraint firstItem="TFv-jQ-Zh6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="60" id="IaI-4y-ceA"/>
                     <constraint firstAttribute="bottom" secondItem="f9b-JF-4CO" secondAttribute="bottom" constant="61" id="Kum-Fb-skr"/>
-                    <constraint firstAttribute="bottom" secondItem="Q9X-gQ-D6m" secondAttribute="bottom" constant="47" id="SLV-n1-hfj"/>
                     <constraint firstItem="f9b-JF-4CO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="349" id="Yhk-Fb-Bp3"/>
                     <constraint firstItem="Q9X-gQ-D6m" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="60" id="a0d-Z6-XDh"/>
                     <constraint firstItem="pfh-KN-xTV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="dBi-0x-N8c"/>
