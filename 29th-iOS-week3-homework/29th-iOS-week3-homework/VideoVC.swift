@@ -8,19 +8,12 @@
 import UIKit
 
 class VideoVC: UIViewController {
-    
-    // MARK: - Vars & Lets Part
+
+    @IBOutlet weak var videoTableView: UITableView!
+    @IBOutlet weak var youtuberCollectionView: UICollectionView!
     
     var videoContentList: [VideoContentData] = []
     var youtuberList: [YoutuberData] = []
-    
-    // MARK: - UI Component Part
-    
-    @IBOutlet weak var videoTableView: UITableView!
-    @IBOutlet weak var youtuberCollectionView: UICollectionView!
-    @IBOutlet weak var loginButton: UIButton!
-    
-    // MARK: - Life Cycle Part
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,18 +25,6 @@ class VideoVC: UIViewController {
         youtuberCollectionView.delegate = self
         youtuberCollectionView.dataSource = self
     }
-    
-    // MARK: - IBAction Part
-    
-    @IBAction func touchUpToLogin(_ sender: UIButton) {
-        let LoginStoryBoard = UIStoryboard.init(name: "GoogleLogin", bundle: nil)
-        guard let nextVC = LoginStoryBoard.instantiateViewController(withIdentifier: "NavigationViewController" ) as? NavigationViewController else {return}
-        
-        nextVC.modalPresentationStyle = .fullScreen
-        present(nextVC, animated: true, completion: nil)
-    }
-    
-    // MARK: - Custom Method Part
     
     func registerXib() {
         let xibName = UINib(nibName: VideoTableViewCell.identifier, bundle: nil)
@@ -71,8 +52,6 @@ class VideoVC: UIViewController {
         ])
     }
 }
-
-// MARK: - Extension Part
 
 extension VideoVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -122,4 +101,6 @@ extension VideoVC: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
+    
 }
+
