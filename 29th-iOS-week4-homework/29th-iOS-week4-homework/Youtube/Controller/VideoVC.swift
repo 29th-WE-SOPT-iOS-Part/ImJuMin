@@ -38,7 +38,6 @@ class VideoVC: UIViewController {
     @IBAction func touchUpToLogin(_ sender: UIButton) {
         let LoginStoryBoard = UIStoryboard.init(name: "GoogleLogin", bundle: nil)
         guard let nextVC = LoginStoryBoard.instantiateViewController(withIdentifier: "NavigationViewController" ) as? NavigationViewController else {return}
-        
         nextVC.modalPresentationStyle = .fullScreen
         present(nextVC, animated: true, completion: nil)
     }
